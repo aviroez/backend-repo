@@ -1,5 +1,7 @@
 # ignore files
-.env
+.env*
+!.env.example
+
 .firebaserc
 service_account.json
 firebase-debug.log

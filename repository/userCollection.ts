@@ -1,13 +1,15 @@
 import { firebaseDB } from '../config/firebaseConfig';
+// import { User } from '../entities/user'; // use from shared repo
+import { User } from '@buddy-turborepo/shared';
 
-export const getUsers = async () => {
+export const getUsers = async (): Promise<User[]> => {
     const usersSnapshot = await firebaseDB.collection('USERS').get();
     return usersSnapshot.docs.map((doc: any) => ({
         ...doc.data(),
     }));
 }
 
-export const updateUser = async (id: string, updatedData: any) => {
+export const updateUser = async (id: string, updatedData: User) => {
     const userRef = firebaseDB.collection('USERS').doc(id);
     return await userRef.set(updatedData, { merge: true });
 }

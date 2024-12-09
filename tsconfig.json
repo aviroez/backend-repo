@@ -6,7 +6,10 @@
     "target": "es2019",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@buddy-turborepo/shared": ["../shared"]
+    }
   },
   "include": [
     "core/**/*.ts"              // Include all TypeScript files in 'core'
