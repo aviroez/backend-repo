@@ -1,6 +1,5 @@
 import { firebaseDB } from '../config/firebaseConfig';
-// import { User } from '../entities/user'; // use from shared repo
-import { User } from '@buddy-turborepo/shared';
+import { User } from '../entities/user';
 
 export const getUsers = async (): Promise<User[]> => {
     const usersSnapshot = await firebaseDB.collection('USERS').get();
