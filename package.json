@@ -1,0 +1,36 @@
+{
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "Initialize Firebase SDK",
+  "main": "lib/core/app.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "npm run build && firebase deploy --only functions",
+    "dev": "npm run build && firebase emulators:start --only functions,firestore,auth",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy-service-account": "node copy-service-account.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "firebase"
+  ],
+  "author": "Aviroez",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase": "^11.0.2",
+    "firebase-admin": "^13.0.1",
+    "firebase-functions": "^6.1.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.1",
+    "concurrently": "^9.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
