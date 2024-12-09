@@ -1,0 +1,9 @@
+# ignore files
+.env
+.firebaserc
+service_account.json
+firebase-debug.log
+firestore-debug.log
+
+# ignore dirs
+node_modules/
